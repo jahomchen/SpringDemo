@@ -13,7 +13,7 @@ public class Start {
             System.out.println(beanDefinitionName);
         }
 
-        System.out.println("================================================");
+        System.out.println("====================================================");
 
         String[] beanNamesForType = run.getBeanNamesForType(User.class);
         for (String s : beanNamesForType) {
