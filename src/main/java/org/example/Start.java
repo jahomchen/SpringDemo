@@ -8,6 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class Start {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(AppConfig.class, args);
+
         String[] beanDefinitionNames = run.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
             System.out.println(beanDefinitionName);
@@ -15,9 +16,7 @@ public class Start {
 
         System.out.println("====================================================");
 
-        String[] beanNamesForType = run.getBeanNamesForType(User.class);
-        for (String s : beanNamesForType) {
-            System.out.println(s);
-        }
+        User bean = run.getBean(User.class);
+        System.out.println(bean.getName());
     }
 }

@@ -1,2 +1,7 @@
 server:
   port: 80
+
+myuser:
+  name: "jahom"
+  age: 34
+
